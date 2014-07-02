@@ -1,0 +1,23 @@
+CREATE OR REPLACE PACKAGE X_NORTHANTS_XML
+/******************************************************************************
+   NAME:       SCL_FMS
+   PURPOSE:
+
+   REVISIONS:
+   Ver        Date        Author           Description
+   ---------  ----------  ---------------  ------------------------------------
+   1.0        19/01/2011             1. Created this package.
+******************************************************************************/
+as
+g_body_sccsid CONSTANT VARCHAR2(2000) := 'x_northants_xml.pkh';
+
+FUNCTION get_version RETURN varchar2;
+FUNCTION get_body_version RETURN varchar2;
+PROCEDURE download_file_to_client (pi_name    IN varchar2 );
+Procedure XMLDataExtract;
+
+END; 
+/
+ 
+show errors;
+
